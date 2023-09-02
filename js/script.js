@@ -1,4 +1,4 @@
-const text = "Il était une fois, dans le royaume de fort fort lointain..."
+const text = "Voici mon portfolio illustré, mes projets sont réalisés en HTML, CSS, JS, PHP, SQL, et Python"
 const splitText = text.split("")
 const containerText = document.querySelector('p')
 let showLetters = ""
