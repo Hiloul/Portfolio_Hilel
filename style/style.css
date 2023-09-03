@@ -108,4 +108,46 @@ a:hover {
 
 footer {
   text-align: center;
+}
+
+/* ... (votre CSS existant) ... */
+/* Media Query pour tablettes */
+@media (max-width: 768px) {
+  nav a {
+    font-size: 1.5em;
+  }
+  h1 {
+    font-size: 3em;
+  }
+  p {
+    font-size: 1.5em;
+  }
+  .cadre {
+    padding: 5px;
+  }
+}
+/* Media Query pour mobiles */
+@media (max-width: 480px) {
+  nav {
+    flex-direction: column;
+  }
+  nav a {
+    font-size: 1.2em;
+    margin: 3px 0;
+  }
+  h1 {
+    font-size: 2em;
+  }
+  p {
+    font-size: 1.2em;
+  }
+  #Progress_Status {
+    width: 80%;
+  }
+  button {
+    font-size: medium;
+  }
+  .binary {
+    font-size: 1.5em;
+  }
 }/*# sourceMappingURL=style.css.map */
