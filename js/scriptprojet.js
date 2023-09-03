@@ -34,15 +34,15 @@ function toggleState3() {
 }
 
 let imgObject = [
-  "/img/Chatbot.png",
-  "/img/SoMe.png",
-  "/img/Motus.png",
-  "/img/TamagotchiPython.png",
-  "/img/GenerateurCadeaux.png",
-  "/img/ClickGame.png",
-  "/img/Dungeon.png",
-  "/img/FormulairePaiement.png",
-  "/img/ClashOfJs.png",
+  "./img/Chatbot.png",
+  "./img/SoMe.png",
+  "./img/Motus.png",
+  "./img/TamagotchiPython.png",
+  "./img/GenerateurCadeaux.png",
+  "./img/ClickGame.png",
+  "./img/Dungeon.png",
+  "./img/FormulairePaiement.png",
+  "./img/ClashOfJs.png",
 ];
 
 let mainImg = 0;
