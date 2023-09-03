@@ -35,7 +35,6 @@ body {
   align-items: center;
   width: 700px;
   height: 500px;
-  background-image: -webkit-repeating-linear-gradient(left, lightblue, 1px, transparent 1px, transparent 20px), -webkit-repeating-linear-gradient(bottom, lightblue, 1px, white 1px, white 20px);
   background-image: repeating-linear-gradient(90deg, lightblue, 1px, transparent 1px, transparent 20px), repeating-linear-gradient(0deg, lightblue, 1px, white 1px, white 20px);
   background-size: 20px 20px;
   background-origin: content-box;
@@ -115,14 +114,7 @@ body {
 }
 
 draw {
-  -webkit-animation: dash 0.5s ease-in-out forwards;
-          animation: dash 0.5s ease-in-out forwards;
-}
-
-@-webkit-keyframes dash {
-  to {
-    stroke-dashoffset: 0;
-  }
+  animation: dash 0.5s ease-in-out forwards;
 }
 
 @keyframes dash {
@@ -203,27 +195,11 @@ h1, h2 {
 }
 
 .fadeBounceIn {
-  -webkit-animation: fadeBounceIn 1s ease-in-out forwards;
-          animation: fadeBounceIn 1s ease-in-out forwards;
+  animation: fadeBounceIn 1s ease-in-out forwards;
 }
 
 .fadeIn {
-  -webkit-animation: fadeIn 2s ease-in-out forwards;
-          animation: fadeIn 2s ease-in-out forwards;
-}
-
-@-webkit-keyframes fadeBounceIn {
-  0% {
-    opacity: 0;
-    transform: scale(0.4);
-  }
-  80% {
-    transform: scale(1.4);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
+  animation: fadeIn 2s ease-in-out forwards;
 }
 
 @keyframes fadeBounceIn {
@@ -237,14 +213,6 @@ h1, h2 {
   100% {
     opacity: 1;
     transform: scale(1);
-  }
-}
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
   }
 }
 @keyframes fadeIn {

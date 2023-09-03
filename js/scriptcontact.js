@@ -5,38 +5,30 @@ const containerText = document.querySelector("p");
 let showLetters = "";
 let counter = 0;
 let randomSpeed = 100;
-
-// setInterval(function () {
-//   let curentLetter = splitText[counter];
-//   showLetters += curentLetter;
-//   containerText.innerText = showLetters;
-//   counter++;
-
-//   if (counter > splitText.length - 1) {
-//     counter = 0;
-//     showLetters = "";
-//   }
-// }, randomSpeed);
-
-
-// Exemple a suivre 
-// variable to store our intervalID
-let nIntervId;
+let interval;
 
 function displayText() {
-  // check if an interval has already been set up
-  if (!nIntervId) {
-    nIntervId = setInterval(function () {
-        let curentLetter = splitText[counter];
-        showLetters += curentLetter;
-        containerText.innerText = showLetters;
-        counter++;
-      
-        if (counter > splitText.length - 1) {
-          counter = 0;
-          showLetters = "";
-        }
-      }, randomSpeed);
+  let currentLetter = splitText[counter];
+  showLetters += currentLetter;
+  containerText.innerHTML =
+    showLetters +
+    '<span class="cursor"> <i class="fa-solid fa-pen fa-xs"></i></span>'; // Ajout du curseur après le texte
+  counter++;
+
+  // Si le message est entièrement affiché
+  if (counter > splitText.length - 1) {
+    clearInterval(interval); // Arrêtez l'intervalle
+
+    // Retirez le curseur
+    containerText.innerHTML = showLetters;
+
+    // Après un délai de 5 secondes, redémarrez l'animation
+    setTimeout(() => {
+      counter = 0;
+      showLetters = "";
+      interval = setInterval(displayText, randomSpeed); // Redémarrez l'intervalle
+    }, 5000); // Définissez le délai à 5 secondes
   }
 }
-displayText()
+
+interval = setInterval(displayText, randomSpeed);
