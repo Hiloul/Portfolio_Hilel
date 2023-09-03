@@ -7,7 +7,6 @@ body {
   background-image: url(https://fyre.cdn.sewest.net/siren/602bb297f34ffb001a20d6e3/background-3x-lnj-1z4-f.png?width=960);
   background-repeat: no-repeat;
   background-size: cover;
-  font-weight: bold;
 }
 
 nav {
@@ -15,14 +14,14 @@ nav {
   justify-content: flex-end;
   align-items: center;
   background-color: black;
-  opacity: 0.2;
+  opacity: 0.4;
   width: 100%;
   height: 60px;
 }
 nav a {
   text-decoration: none;
   color: whitesmoke;
-  font-size: 1.5em;
+  font-size: 2em;
   margin: 5px;
 }
 
@@ -39,6 +38,10 @@ a {
   color: black;
   font-size: 1.5em;
   margin: 5px;
+}
+
+a:hover {
+  color: rgb(172, 58, 58);
 }
 
 #toggleContainer label {
@@ -124,7 +127,6 @@ a {
 
 #outer3 {
   width: 100px;
-  height: 40px;
   background-color: white;
   margin: 10px auto;
   border-radius: 3px;

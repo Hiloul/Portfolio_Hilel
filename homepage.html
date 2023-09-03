@@ -1,56 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.cdnfonts.com/css/dk-business-as-usual" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.cdnfonts.com/css/dk-business-as-usual"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style/style.css" />
     <title>Mon Portfolio</title>
-</head>
-<body>
+  </head>
+  <body>
     <nav>
-        <a href="homepage.html">ACCUEIL</a>
-        <a href="projectpage.html">PROJETS</a>
-        <a href="contactpage.html">CONTACT</a>
+      <a href="homepage.html">ACCUEIL</a>
+      <a href="projectpage.html">PROJETS</a>
+      <a href="contactpage.html">CONTACT</a>
     </nav>
-   <div class="corp">
-<h1>Bienvenue</h1>
-<p></p>
-<div id="Progress_Status">
-    <div id="myprogressBar"></div>
-  </div>
-    
-  <br>
-  <button onclick="update()">Commencer le téléchargement</button> 
-    
-  <script>
-  function update() {
-    var element = document.getElementById("myprogressBar");   
-    var width = 1;
-    var identity = setInterval(scene, 10);
-    function scene() {
-      if (width >= 100) {
-        clearInterval(identity);
-      } else {
-        width++; 
-        element.style.width = width + '%'; 
-      }
-    }
-  }
-  </script>
-    
-</div>
+    <div class="corp">
+      <h1>Bienvenue</h1>
+      <p></p>
+      <div id="Progress_Status">
+        <div id="myprogressBar">0%</div>
+      </div>
 
-    <footer>
-        Mentions Légales
-        &COPY;Tous droits réservés
-        
+      <br />
+      <button onclick="update()">Téléchargez mon CV</button>
 
-    </footer>
+      <script>
+        function update() {
+          var element = document.getElementById("myprogressBar");
+          var width = 1;
+          var identity = setInterval(scene, 10);
+          function scene() {
+            if (width >= 100) {
+              clearInterval(identity);
+              downloadCV(); // Télécharger le CV une fois la barre de progression terminée
+            } else {
+              width++;
+              element.style.width = width + "%";
+              element.innerText = width + "%"; // afficher le pourcentage dans la barre
+            }
+          }
+        }
+
+        function downloadCV() {
+          var link = document.createElement("a");
+          link.href = "/img/cvHilel.png";
+          link.download = "CV_Hilel_HK.png";
+          link.dispatchEvent(new MouseEvent("click"));
+        }
+      </script>
+    </div>
+
+    <footer>Mentions Légales &COPY;Tous droits réservés</footer>
     <script src="js/script.js"></script>
-</body>
+  </body>
 </html>
 <!-- font-family: 'DK Business As Usual', sans-serif;
 background-image: url(https://fyre.cdn.sewest.net/siren/602bb297f34ffb001a20d6e3/background-3x-lnj-1z4-f.png?width=960);
