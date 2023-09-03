@@ -242,9 +242,6 @@ footer{
   text-align: center;
 }
 
-
-/* ... (votre CSS existant) ... */
-
 /* Media Query pour tablettes */
 @media (max-width: 768px) {
   nav a {
@@ -289,12 +286,10 @@ footer{
 @media (max-width: 480px) {
   nav {
     flex-direction: column;
-    height: auto;
-    padding: 10px 0;
   }
-
   nav a {
-    margin: 5px 10px;
+    font-size: 1.2em;
+    margin: 3px 0;
   }
 
   h1 {
