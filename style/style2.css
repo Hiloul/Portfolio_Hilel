@@ -239,4 +239,82 @@ a:hover {
 
 footer {
   text-align: center;
+}
+
+/* ... (votre CSS existant) ... */
+/* Media Query pour tablettes */
+@media (max-width: 768px) {
+  nav a {
+    font-size: 1.5em;
+  }
+  h1 {
+    font-size: 3em;
+  }
+  .tileItem {
+    width: 200px;
+    height: 200px;
+  }
+  #galleryContainer {
+    height: 400px;
+    width: 650px;
+  }
+  #mainView {
+    height: 350px;
+    width: 350px;
+  }
+  #leftView, #rightView {
+    height: 300px;
+    width: 120px;
+  }
+  .navBtns {
+    width: 60px;
+    height: 60px;
+  }
+  #toggle {
+    width: 150px;
+  }
+}
+/* Media Query pour mobiles */
+@media (max-width: 480px) {
+  nav {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 0;
+  }
+  nav a {
+    margin: 5px 10px;
+  }
+  h1 {
+    font-size: 2em;
+  }
+  a {
+    font-size: 1.2em;
+    margin: 3px;
+  }
+  #tilesContainer {
+    margin-top: 5vh;
+  }
+  .tileItem {
+    width: 150px;
+    height: 150px;
+  }
+  #galleryContainer {
+    height: 300px;
+    width: 500px;
+  }
+  #mainView {
+    height: 250px;
+    width: 250px;
+  }
+  #leftView, #rightView {
+    height: 200px;
+    width: 90px;
+  }
+  .navBtns {
+    width: 40px;
+    height: 40px;
+  }
+  #toggle {
+    width: 120px;
+  }
 }/*# sourceMappingURL=style2.css.map */
