@@ -254,6 +254,9 @@ footer {
 
 /* Media Query pour tablettes */
 @media (max-width: 768px) {
+  html {
+    overflow-x: hidden;
+  }
   nav a {
     font-size: 1.5em;
   }
@@ -287,6 +290,9 @@ footer {
 }
 /* Media Query pour mobiles */
 @media (max-width: 480px) {
+  html {
+    overflow-x: hidden;
+  }
   nav {
     flex-direction: column;
   }
