@@ -4,6 +4,10 @@
           user-select: none;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -129,6 +133,7 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow-wrap: break-word;
 }
 
 #outer3 {
@@ -267,7 +272,8 @@ footer {
     height: 350px;
     width: 350px;
   }
-  #leftView, #rightView {
+  #leftView,
+  #rightView {
     height: 300px;
     width: 120px;
   }
@@ -310,7 +316,8 @@ footer {
     height: 250px;
     width: 250px;
   }
-  #leftView, #rightView {
+  #leftView,
+  #rightView {
     height: 200px;
     width: 90px;
   }
