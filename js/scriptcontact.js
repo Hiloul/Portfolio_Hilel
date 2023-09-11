@@ -1,5 +1,5 @@
 //Auto-writer
-const text = "N'hésitez pas à me contacter";
+const text = "N'hésitez pas à me contacter.";
 const splitText = text.split("");
 const containerText = document.querySelector("p");
 let showLetters = "";

@@ -1,5 +1,5 @@
 const text =
-  "Voici mon portfolio illustré, mes projets sont réalisés en HTML, CSS, JS, PHP, SQL, et Python";
+  "Voici mon portfolio illustré, mes projets sont réalisés en HTML, CSS, JS, PHP, SQL, et Python.";
 const splitText = text.split("");
 const containerText = document.querySelector("p");
 let showLetters = "";
